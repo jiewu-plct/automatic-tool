@@ -1,0 +1,21 @@
+- hosts: d1-1
+  vars_files:
+  - vars_keyvalue.yaml
+  tasks:
+  - name: save key and value
+    script: ./save_keyvalue.sh {{ item.port_key }} {{ item.port }} {{ item.user_key }} {{ item.user }} {{ item.os_key }} {{ item.os }}
+    register: result
+    loop: "{{ keyvaluelist1 }}"  
+  - name: show debug info
+    debug: var=result verbosity=0
+
+- hosts: d1-2
+  vars_files:
+  - vars_keyvalue.yaml
+  tasks:
+  - name: save key and value
+    script: ./save_keyvalue.sh {{ item.port_key }} {{ item.port }} {{ item.user_key }} {{ item.user }} {{ item.os_key }} {{ item.os }}
+    register: result
+    loop: "{{ keyvaluelist2 }}"  
+  - name: show debug info
+    debug: var=result verbosity=0

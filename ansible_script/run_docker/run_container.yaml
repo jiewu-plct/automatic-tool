@@ -1,0 +1,118 @@
+- hosts: d1-1
+  vars_files:
+  - vars_conatiner.yaml 
+  tasks:
+  - name: create docker container
+    script: ./run_container.sh {{ item.port }} {{ item.user }} {{ item.os }}
+    register: result
+    loop: "{{ d1_1_list }}"
+  - name: show debug info
+    debug: var=result verbosity=0
+  
+
+- hosts: d1-2
+  vars_files:
+  - vars_conatiner.yaml 
+  tasks:
+  - name: create docker container
+    script: ./run_container.sh {{ item.port }} {{ item.user }} {{ item.os }}
+    register: result
+    loop: "{{ d1_2_list }}"
+  - name: show debug info
+    debug: var=result verbosity=0
+
+
+- hosts: d1-3
+  vars_files:
+  - vars_conatiner.yaml 
+  tasks:
+  - name: create docker container
+    script: ./run_container.sh {{ item.port }} {{ item.user }} {{ item.os }}
+    register: result
+    loop: "{{ d1_3_list }}"
+  - name: show debug info
+    debug: var=result verbosity=0
+  
+
+- hosts: d1-4
+  vars_files:
+  - vars_conatiner.yaml 
+  tasks:
+  - name: create docker container
+    script: ./run_container.sh {{ item.port }} {{ item.user }} {{ item.os }}
+    register: result
+    loop: "{{ d1_4_list }}"
+  - name: show debug info
+    debug: var=result verbosity=0
+
+
+- hosts: d1-5
+  vars_files:
+  - vars_conatiner.yaml 
+  tasks:
+  - name: create docker container
+    script: ./run_container.sh {{ item.port }} {{ item.user }} {{ item.os }}
+    register: result
+    loop: "{{ d1_5_list }}"
+  - name: show debug info
+    debug: var=result verbosity=0
+  
+
+- hosts: d1-6
+  vars_files:
+  - vars_conatiner.yaml 
+  tasks:
+  - name: create docker container
+    script: ./run_container.sh {{ item.port }} {{ item.user }} {{ item.os }}
+    register: result
+    loop: "{{ d1_6_list }}"
+  - name: show debug info
+    debug: var=result verbosity=0
+
+
+- hosts: d1-7
+  vars_files:
+  - vars_conatiner.yaml 
+  tasks:
+  - name: create docker container
+    script: ./run_container.sh {{ item.port }} {{ item.user }} {{ item.os }}
+    register: result
+    loop: "{{ d1_7_list }}"
+  - name: show debug info
+    debug: var=result verbosity=0
+  
+
+- hosts: d1-8
+  vars_files:
+  - vars_conatiner.yaml 
+  tasks:
+  - name: create docker container
+    script: ./run_container.sh {{ item.port }} {{ item.user }} {{ item.os }}
+    register: result
+    loop: "{{ d1_8_list }}"
+  - name: show debug info
+    debug: var=result verbosity=0
+
+
+- hosts: d1-9
+  vars_files:
+  - vars_conatiner.yaml 
+  tasks:
+  - name: create docker container
+    script: ./run_container.sh {{ item.port }} {{ item.user }} {{ item.os }}
+    register: result
+    loop: "{{ d1_9_list }}"
+  - name: show debug info
+    debug: var=result verbosity=0
+  
+
+- hosts: d1-10
+  vars_files:
+  - vars_conatiner.yaml 
+  tasks:
+  - name: create docker container
+    script: ./run_container.sh {{ item.port }} {{ item.user }} {{ item.os }}
+    register: result
+    loop: "{{ d1_10_list }}"
+  - name: show debug info
+    debug: var=result verbosity=0

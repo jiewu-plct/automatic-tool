@@ -1,0 +1,22 @@
+- hosts: d1-1
+  vars_files:
+  - vars_githubid.yaml 
+  tasks:
+  - name: get user pubkey and copy it to docker container 
+    script: ./get_user_pubkey.sh {{ item.github_id }} {{ item.os }}
+    register: result
+    loop: "{{ d1_1_list }}"
+  - name: show debug info
+    debug: var=result verbosity=0
+  
+
+- hosts: d1-2
+  vars_files:
+  - vars_githubid.yaml 
+  tasks:
+  - name: get user pubkey and copy it to docker container 
+    script: ./get_user_pubkey.sh {{ item.github_id }} {{ item.os }}
+    register: result
+    loop: "{{ d1_2_list }}"
+  - name: show debug info
+    debug: var=result verbosity=0

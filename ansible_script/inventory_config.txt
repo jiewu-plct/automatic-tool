@@ -1,0 +1,21 @@
+[d1-1]
+10.8.8.2 ansible_ssh_user=root
+[d1-2]
+10.8.8.3 ansible_ssh_user=root
+[d1-3]
+10.8.8.4 ansible_ssh_user=root
+[d1-4]
+10.8.8.5 ansible_ssh_user=root
+[d1-5]
+10.8.8.6 ansible_ssh_user=root
+[d1-6]
+10.8.8.7 ansible_ssh_user=root
+[d1-7]
+10.8.8.8 ansible_ssh_user=root
+[d1-8]
+10.8.8.9 ansible_ssh_user=root
+[d1-9]
+10.8.8.10 ansible_ssh_user=root
+[d1-10]
+10.8.8.11 ansible_ssh_user=root   
+                        

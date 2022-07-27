@@ -1,0 +1,21 @@
+- hosts: d1-1
+  vars_files:
+  - vars_container.yaml
+  tasks:
+  - name: create docker container
+    script: ./run_container.sh {{ item.port_key }} {{ item.user_key }} {{ item.os_key}}
+    register: result
+    loop: "{{ containerlist1 }}"
+  - name: show debug info
+    debug: var=result verbosity=0
+
+- hosts: d1-2
+  vars_files:
+  - vars_container.yaml
+  tasks:
+  - name: create docker container
+    script: ./run_container.sh {{ item.port_key }} {{ item.user_key }} {{ item.os_key}}
+    register: result
+    loop: "{{ containerlist2 }}"
+  - name: show debug info
+    debug: var=result verbosity=0

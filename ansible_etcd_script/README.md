@@ -1,0 +1,3 @@
+1. 使用ansible脚本前，优先需要配置host inventory,可以参考inventory_config.txt，要确保这些host可以ssh免密登录
+2. get_pubkeys文件夹中的脚本实现的是从github上获取用户账号中的ssh公钥，并存放到要访问的docker container中，要访问的容器名称由变量文件传入。其中变量文件vars_githubbid.yaml中的内容是存储在etcd中的value对应的key
+3. run_docker文件夹中的脚本实现的是根据githubID创建对应的容器，创建的容器名称由变量文件传入。其中变量文件vars_container.yaml中的内容是存储在etcd中的value对应的key

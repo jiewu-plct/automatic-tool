@@ -1,0 +1,22 @@
+changed: true
+cmd: [curl, 'https://discovery.etcd.io/new?size=2']
+delta: '0:00:02.690897'
+end: '2021-12-21 14:23:09.497617'
+failed: false
+msg: ''
+rc: 0
+start: '2021-12-21 14:23:06.806720'
+stderr: "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n\
+  \                                 Dload  Upload   Total   Spent    Left  Speed\n\
+  \r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r\
+  \  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\r\
+  100    58  100    58    0     0     21      0  0:00:02  0:00:02 --:--:--    21\r\
+  100    58  100    58    0     0     21      0  0:00:02  0:00:02 --:--:--    21"
+stderr_lines: ['  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current',
+  '                                 Dload  Upload   Total   Spent    Left  Speed',
+  '', '  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0',
+  '  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0',
+  '100    58  100    58    0     0     21      0  0:00:02  0:00:02 --:--:--    21',
+  '100    58  100    58    0     0     21      0  0:00:02  0:00:02 --:--:--    21']
+stdout: https://discovery.etcd.io/d7cb8c12c6c090ce447d6ec1f35031b4
+stdout_lines: ['https://discovery.etcd.io/d7cb8c12c6c090ce447d6ec1f35031b4']

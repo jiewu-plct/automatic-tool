@@ -1,0 +1,6 @@
+node_number: "3"
+hostname: "{{ ansible_hostname }}"
+hostip: "{{ ansible_wlan0['ipv4']['address'] }}"
+node1: {'name':'d1-1','ip':'192.168.1.109'}
+node2: {'name':'d1-2','ip':'192.168.1.110'}
+node3: {'name':'d1-3','ip':'192.168.1.108'}

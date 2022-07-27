@@ -1,0 +1,12 @@
+- hosts: localhost
+  vars_files:
+  - vars_etcd.yaml
+  tasks:
+  - name: get discovery url
+    command: curl https://discovery.etcd.io/new?size={{ node_number }}
+    register: discoveryresult
+  - name: save discovery url
+    copy:
+      content: "{{ discoveryresult|to_yaml }}"
+      dest: ./vars_discovery.yaml
+    delegate_to: localhost

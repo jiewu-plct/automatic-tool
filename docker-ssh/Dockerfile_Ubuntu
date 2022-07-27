@@ -1,0 +1,11 @@
+FROM riscv64/ubuntu:latest
+
+RUN useradd -r -m -s /bin/bash tester
+RUN mkdir -p /home/tester/.ssh
+WORKDIR /home/tester
+
+RUN apt-get update && apt-get install -y openssh-client && apt-get install -y openssh-server && apt-get install -y vim \
+    && apt-get install -y sudo
+ADD ./sshd_config /etc/ssh/sshd_config
+ADD ./sudoers_ubuntu /etc/sudoers
+ENTRYPOINT service ssh start && chmod 440 /etc/sudoers && bash

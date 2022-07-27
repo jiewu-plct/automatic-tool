@@ -1,0 +1,38 @@
+- hosts: d1-group
+  vars_files:
+  - vars_etcd.yaml 
+  tasks:
+  - name: copy etcd to node 
+    copy:
+      src: ./etcd
+      dest: /root/
+      mode: '0755'
+  # - name: check if data directory for etcd exists
+  #   stat:
+  #     path: /var/lib/etcd
+  #   register: datadir
+  # - name: delete data directory for etcd if it is exists
+  #   file:
+  #     path: /var/lib/etcd
+  #     state: absent
+  #   when: datadir.stat.exists
+  - name: create data directory for etcd
+    file:
+      path: /var/lib/etcd
+      state: directory
+      mode: '0700'
+  - name: create etcd.serivce on node
+    template:
+      src: ./etcd_static.service.j2
+      dest: /etc/systemd/system/etcd.service
+    register: configfile_result
+  - name: start etcd service
+    systemd:
+      daemon_reload: true
+      name: etcd
+      state: started
+      enabled: true
+    when: configfile_result is succeeded
+    register: result
+  - name: show debug info
+    debug: var=result verbosity=0

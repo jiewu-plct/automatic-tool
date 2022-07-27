@@ -1,0 +1,12 @@
+[d1-group]
+10.8.8.2 ansible_ssh_user=root
+10.8.8.3 ansible_ssh_user=root
+10.8.8.4 ansible_ssh_user=root
+10.8.8.5 ansible_ssh_user=root
+10.8.8.6 ansible_ssh_user=root
+10.8.8.7 ansible_ssh_user=root
+10.8.8.8 ansible_ssh_user=root
+10.8.8.9 ansible_ssh_user=root
+10.8.8.10 ansible_ssh_user=root
+10.8.8.11 ansible_ssh_user=root   
+                        
