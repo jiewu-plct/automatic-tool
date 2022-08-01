@@ -4,7 +4,7 @@
 
 ##### 2. 文件说明
 
-data_model: 定义了抓取的device硬件相关信息的模型
+data_model: 定义了抓取的device硬件相关信息的模型，执行脚本前需要在其中的类DataBaseInfo中设置相应的database参数
 
 get_deviceinfo.py: 定义了抓取device硬件相关信息的类
 
